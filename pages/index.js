@@ -1,23 +1,19 @@
-import { useEffect, useState, useRef } from "react";
-import { projectsList } from "../components/data";
-import Head from "next/head";
-import IntroOverlay from "../components/introOverlay";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { useEffect, useState, useRef } from 'react';
+import { projectsList } from '../components/data';
+import Head from 'next/head';
+import IntroOverlay from '../components/introOverlay';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { GoChevronDown, GoChevronRight } from 'react-icons/go';
 import {
-  faGithub,
-  faLinkedin,
-  faTwitter,
-  faWhatsapp,
-} from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faChevronDown,
-  faChevronRight,
-  faEnvelope
-} from "@fortawesome/free-solid-svg-icons";
-import { motion } from "framer-motion";
-import Link from "next/link";
+  AiFillGithub,
+  AiFillLinkedin,
+  AiFillMail,
+  AiOutlineWhatsApp,
+  AiOutlineTwitter,
+} from 'react-icons/ai';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 export default function Home({ project }) {
   const [animationComplete, setAnimationComplete] = useState(false);
@@ -25,13 +21,13 @@ export default function Home({ project }) {
 
   const completeAnimation = () => {
     setAnimationComplete(true);
-    document.body.style.overflowY = "auto";
+    document.body.style.overflowY = 'auto';
   };
 
   const executeScroll = () => projectsRef.current.scrollIntoView();
 
   const scrollToProject = () => {
-    if (typeof window !== "undefined") {
+    if (typeof window !== 'undefined') {
       if (project) {
         // Use the hash to find the first element with that id
         const element = document.getElementById(project);
@@ -47,56 +43,56 @@ export default function Home({ project }) {
   useEffect(() => {
     // Inner Page height for mobile devices
     let vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty("--vh", `${vh}px`);
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
 
     // GSAP animation
     gsap.registerPlugin(ScrollTrigger);
     let tl = gsap.timeline();
-    let projects = gsap.utils.toArray(".project");
-    let mediaQuery = window.matchMedia("(min-width: 967px)");
+    let projects = gsap.utils.toArray('.project');
+    let mediaQuery = window.matchMedia('(min-width: 967px)');
 
     const homeAnimation = (animation) => {
       if (!project) {
-        tl.to(".ball", {
+        tl.to('.ball', {
           duration: 2,
-          y: "100vh",
-          ease: "bounce.out",
+          y: '100vh',
+          ease: 'bounce.out',
         })
-          .to(".ball", {
+          .to('.ball', {
             duration: 1,
             scale: 30,
-            ease: "power3.out",
+            ease: 'power3.out',
             onComplete: animation,
           })
-          .from(".after-animation", {
+          .from('.after-animation', {
             duration: 0.8,
             opacity: 0,
-            ease: "power3.out",
+            ease: 'power3.out',
           })
-          .from(".title", {
+          .from('.title', {
             duration: 0.5,
             y: 100,
             delay: 0.2,
             opacity: 0,
-            ease: "power3.out",
+            ease: 'power3.out',
           })
-          .from(".peep-image", {
+          .from('.peep-image', {
             duration: 0.5,
             y: 100,
             opacity: 0,
-            ease: "power3.out",
+            ease: 'power3.out',
           })
-          .from(".job-title", {
+          .from('.job-title', {
             duration: 0.5,
             y: 100,
             opacity: 0,
-            ease: "power3.out",
+            ease: 'power3.out',
           })
-          .from(".scroll-indicator", {
+          .from('.scroll-indicator', {
             duration: 0.5,
             y: 100,
             opacity: 0,
-            ease: "power3.out",
+            ease: 'power3.out',
           });
       } else {
         completeAnimation();
@@ -108,13 +104,13 @@ export default function Home({ project }) {
           let tlProject = gsap.timeline({
             scrollTrigger: {
               trigger: project,
-              start: "top center",
-              end: "center center",
+              start: 'top center',
+              end: 'center center',
               scrub: 1,
             },
           });
-          let projectImage = project.querySelector("img");
-          let projectInfo = project.querySelector(".project-info");
+          let projectImage = project.querySelector('img');
+          let projectInfo = project.querySelector('.project-info');
 
           tlProject
             .from(projectImage, {
@@ -131,13 +127,13 @@ export default function Home({ project }) {
           let tlProject = gsap.timeline({
             scrollTrigger: {
               trigger: project,
-              start: "top center",
-              end: "center center",
+              start: 'top center',
+              end: 'center center',
               scrub: 1,
             },
           });
-          let projectImage = project.querySelector("img");
-          let projectInfo = project.querySelector(".project-info");
+          let projectImage = project.querySelector('img');
+          let projectInfo = project.querySelector('.project-info');
 
           tlProject
             .from(projectImage, {
@@ -153,20 +149,20 @@ export default function Home({ project }) {
 
       let tlFooter = gsap.timeline({
         scrollTrigger: {
-          trigger: "footer",
-          start: "top center",
-          end: "top top",
+          trigger: 'footer',
+          start: 'top center',
+          end: 'top top',
           scrub: 1,
         },
       });
 
       tlFooter
-        .from("footer h2", {
+        .from('footer h2', {
           y: 100,
           opacity: 0,
           duration: 0.6,
         })
-        .from("footer .footer-links", {
+        .from('footer .footer-links', {
           y: 100,
           opacity: 0,
           duration: 0.6,
@@ -228,7 +224,7 @@ export default function Home({ project }) {
                     whileTap={{ scale: 0.95 }}
                     title="Go to Ajiboye's GitHub"
                   >
-                    <FontAwesomeIcon icon={faGithub} size="2x" />
+                    <AiFillGithub size="2.2rem" />
                     <span className="header-hidden-text">GitHub</span>
                   </motion.a>
                 </li>
@@ -241,7 +237,7 @@ export default function Home({ project }) {
                     whileTap={{ scale: 0.95 }}
                     title="Connect with Ajiboye on LinkedIn"
                   >
-                    <FontAwesomeIcon icon={faLinkedin} size="2x" />
+                    <AiFillLinkedin size="2.2rem" />
                     <span className="header-hidden-text">LinkedIn</span>
                   </motion.a>
                 </li>
@@ -253,7 +249,8 @@ export default function Home({ project }) {
         <main className="main-home">
           <div className="cta">
             <h1 className="title">
-              I <span className="playful"> Live </span> and <span className="playful"> Breathe </span> API's.
+              I <span className="playful"> Live </span> and{' '}
+              <span className="playful"> Breathe </span> API's.
             </h1>
             <img
               src="/images/My_Peep.png"
@@ -269,7 +266,7 @@ export default function Home({ project }) {
           </p>
           <button className="scroll-indicator" onClick={executeScroll}>
             <span>Projects</span>
-            <FontAwesomeIcon icon={faChevronDown} />
+            <GoChevronDown size="1.3rem" />
           </button>
         </main>
         <div className="project-container" ref={projectsRef}>
@@ -301,15 +298,15 @@ export default function Home({ project }) {
                   <Link href={link}>
                     <h2>{name}</h2>
                   </Link>
-                  {description.split("\n").map((str, index) => (
+                  {description.split('\n').map((str, index) => (
                     <p key={index}>{str}</p>
                   ))}
                   {longDescription && (
                     <Link href={link}>
                       <button className="project-read-more">
-                        <span>Read More</span>{" "}
+                        <span>Read More</span>{' '}
                         <div className="read-more-arrow">
-                          <FontAwesomeIcon icon={faChevronRight} />
+                          <GoChevronRight />
                         </div>
                       </button>
                     </Link>
@@ -363,7 +360,7 @@ export default function Home({ project }) {
                 whileTap={{ scale: 0.95 }}
                 title="Send me an email"
               >
-                <FontAwesomeIcon icon={faEnvelope} size="2x" />
+                <AiFillMail size="2.2rem" />
               </motion.a>
             </li>
             <li>
@@ -375,7 +372,7 @@ export default function Home({ project }) {
                 whileTap={{ scale: 0.95 }}
                 title="Go to Ajiboye's GitHub"
               >
-                <FontAwesomeIcon icon={faGithub} size="2x" />
+                <AiFillGithub size="2.2rem" />
               </motion.a>
             </li>
             <li>
@@ -387,7 +384,7 @@ export default function Home({ project }) {
                 whileTap={{ scale: 0.95 }}
                 title="Connect with Ajiboye on LinkedIn"
               >
-                <FontAwesomeIcon icon={faLinkedin} size="2x" />
+                <AiFillLinkedin size="2.2rem" />
               </motion.a>
             </li>
             <li>
@@ -399,7 +396,7 @@ export default function Home({ project }) {
                 whileTap={{ scale: 0.95 }}
                 title="Connect with Ajiboye on WhatsApp"
               >
-                <FontAwesomeIcon icon={faWhatsapp} size="2x" />
+                <AiOutlineWhatsApp size="2.2rem" />
               </motion.a>
             </li>
             <li>
@@ -411,7 +408,7 @@ export default function Home({ project }) {
                 whileTap={{ scale: 0.95 }}
                 title="Follow Ajiboye on Twitter"
               >
-                <FontAwesomeIcon icon={faTwitter} size="2x" />
+                <AiOutlineTwitter size="2.2rem" />
               </motion.a>
             </li>
           </ul>
