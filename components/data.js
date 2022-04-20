@@ -35,4 +35,16 @@ export const projectsList = [
     project: "FIle-Share",
     tools: ["Node.js", "HTML", "CSS", "JavaScript"],
   },
+  {
+    id: 4,
+    name: "Simple Bank",
+    description:
+      "Simple Bank is a Backend Application that allows users to manage their bank accounts. This is a mini app that allows you to manage your bank accounts and transactions. You can create an account, deposit, withdraw, transfer money, and record acounts entries.",
+    image: "/images/bank.jpg",
+    mobileImage: "/images/bank.jpg",
+    link: "",
+    GitHub: "https://github.com/Youngprinnce/simple-bank",
+    project: "Simple Bank",
+    tools: ["Golang", "Sqlc", "MakeFile", "Postman"],
+  },
 ];

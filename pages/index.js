@@ -318,17 +318,19 @@ export default function Home({ project }) {
                     ))}
                   </ul>
                   <motion.div className="project-btns">
-                    <motion.a
-                      href={link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      title={`Open site of ${name}`}
-                      className="project-btn"
-                    >
-                      Open Site
-                    </motion.a>
+                  {link && (
+                      <motion.a
+                        href={link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        title={`View Code for ${name}`}
+                        className="project-btn"
+                      >
+                        View Code
+                      </motion.a>
+                    )}
                     {GitHub && (
                       <motion.a
                         href={GitHub}
