@@ -250,7 +250,7 @@ export default function Home({ project }) {
           <div className="cta">
             <h1 className="title">
               I <span className="playful"> Live </span> and{' '}
-              <span className="playful"> Breathe </span> API's.
+              <span className="playful"> Breathe </span> APIs.
             </h1>
             <img
               src="/images/My_Peep.png"
@@ -328,7 +328,7 @@ export default function Home({ project }) {
                         title={`View Code for ${name}`}
                         className="project-btn"
                       >
-                        View Code
+                        View Link
                       </motion.a>
                     )}
                     {GitHub && (

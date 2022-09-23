@@ -47,4 +47,14 @@ export const projectsList = [
     project: "Simple Bank",
     tools: ["Golang", "Sqlc", "MakeFile", "Postman"],
   },
+  {
+    id: 5,
+    name: "Dorecur",
+    description:"Dorecur is a subscription management solution that enable businesses and individuals to take control and have visibility of their recurring spend and expenses through a cloud based and software platform with distinctive capabilities to accelerate digital transformation. We have developed a centralized system for managing subscription & bills payment to enhance productivity and save cost.",
+    image: "/images/dorecur.jpeg",
+    mobileImage: "/images/dorecur.jpeg",
+    link: "https://play.google.com/store/apps/details?id=com.dorecur.dorecur&hl=en&gl=US",
+    project: "Dorecur",
+    tools: ["NodeJs", "Postgresql", "Redis", "AWS"],
+  },
 ];
