@@ -57,4 +57,14 @@ export const projectsList = [
     project: "Dorecur",
     tools: ["NodeJs", "Postgresql", "Redis", "AWS"],
   },
+  {
+    id: 6,
+    name: "Nosh",
+    description:"Nosh is a FinTech product that offers easy and quick transactions for anyone. Equipped with modern and seamless means of payment, Nosh offers the easiest and most convenient way for you to buy gift card and sell gift card in Nigeria, buy airtime and data, virtual cards, and loads of other products, whatever they may be.",
+    image: "/images/nosh.png",
+    mobileImage: "/images/nosh.png",
+    link: "https://nosh.ng/",
+    project: "Nosh",
+    tools: ["NodeJs", "MongoDB", "Redis", "AWS", "ExpressJS"],
+  },
 ];
