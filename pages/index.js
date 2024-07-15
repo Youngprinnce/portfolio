@@ -184,13 +184,13 @@ export default function Home({ project }) {
         <meta charSet="utf-8" />
         <meta
           name="description"
-          content="Website for Hassan Olalekan, a backend engineer with a degree in Mechatronics Engineering at the Federal University of Technology Minna. Skilled with Node, MongoDB, Express.js, JavaScript, TypeScript, PostgreSQL, Python, AWS, Docker, Redis, Flask, and Git."
+          content="Website for Ajiboye  Adedotun, a Backend engineer with a degree in Mechatronics Engineering at the Federal University of Technology Minna. Skilled with Node, MongoDB, Express.js, JavaScript, TypeScript, PostgreSQL, Python, Golangm AWS, Docker, Redis, Flask, and Git."
         ></meta>
         <meta property="og:url" content="https://devwurld.vercel.app/" />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="en" />
         <meta property="og:image" content="/ajiboye.png" />
-        <title>Hassan Olalekan | Backend Engineer</title>
+        <title>Ajiboye Adedotun | Backend Engineer</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {animationComplete === false && <IntroOverlay />}
@@ -205,12 +205,12 @@ export default function Home({ project }) {
               <ul className="nav-list">
                 <li>
                   <motion.a
-                    href="https://docs.google.com/document/d/1Uj8gvc9vUbrvFp-x8B7I5-f6jKleovI3/edit?usp=sharing&ouid=104512904586513266332&rtpof=true&sd=true"
+                    href="https://docs.google.com/document/d/1FCp5CraI6gHbI_5pwzf2bFtInW6MwZ5c/edit?usp=sharing&ouid=104512904586513266332&rtpof=true&sd=true"
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
-                    title="View Hassan's Resume"
+                    title="View Ajiboye's Resume"
                   >
                     Resume
                   </motion.a>
@@ -222,7 +222,7 @@ export default function Home({ project }) {
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    title="Go to Hassan's GitHub"
+                    title="Go to Ajiboye's GitHub"
                   >
                     <AiFillGithub size="2.2rem" />
                     <span className="header-hidden-text">GitHub</span>
@@ -249,7 +249,7 @@ export default function Home({ project }) {
 
           <p className="job-title">
             <span className="text-reveal">
-              Hassan Olalekan / Backend Engineer
+              Ajiboye Adedotun / Backend Engineer
             </span>
           </p>
           <button className="scroll-indicator" onClick={executeScroll}>
@@ -343,7 +343,7 @@ export default function Home({ project }) {
           <ul className="footer-links">
             <li>
               <motion.a
-                href="mailto:Ahmed.Hassan017@outlook.com"
+                href="mailto:ajiboyeadedotun16@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
@@ -368,12 +368,12 @@ export default function Home({ project }) {
 
             <li>
               <motion.a
-                href="https://wa.me/+1(361)-516-7370"
+                href="https://wa.me/+2348154267564"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                title="Connect with Hassaon on WhatsApp"
+                title="Connect with Ajiboye on WhatsApp"
               >
                 <AiOutlineWhatsApp size="2.2rem" />
               </motion.a>
@@ -388,6 +388,19 @@ export default function Home({ project }) {
                 title="Follow Ajiboye on Twitter"
               >
                 <AiOutlineTwitter size="2.2rem" />
+              </motion.a>
+            </li>
+            <li>
+              <motion.a
+                href="https://www.linkedin.com/in/ajiboye-adedotun/"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                title="Connect with Ajiboye on LinkedIn"
+              >
+                <AiFillLinkedin size="2.2rem" />
+                
               </motion.a>
             </li>
           </ul>
@@ -409,20 +422,6 @@ export async function getServerSideProps(context) {
   };
 }
 
-
-// <li>
-//                   <motion.a
-//                     href="https://www.linkedin.com/in/ajiboye-adedotun/"
-//                     target="_blank"
-//                     rel="noopener noreferrer"
-//                     whileHover={{ scale: 1.05 }}
-//                     whileTap={{ scale: 0.95 }}
-//                     title="Connect with Ajiboye on LinkedIn"
-//                   >
-//                     <AiFillLinkedin size="2.2rem" />
-//                     <span className="header-hidden-text">LinkedIn</span>
-//                   </motion.a>
-//                 </li>
 
 
 
