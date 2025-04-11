@@ -249,7 +249,7 @@ export default function Home({ project }) {
 
           <p className="job-title">
             <span className="text-reveal">
-              Ajiboye Adedotun / Backend Engineer
+              Ajiboye Adedotun / Senior Backend Engineer
             </span>
           </p>
           <button className="scroll-indicator" onClick={executeScroll}>
@@ -376,18 +376,6 @@ export default function Home({ project }) {
                 title="Connect with Ajiboye on WhatsApp"
               >
                 <AiOutlineWhatsApp size="2.2rem" />
-              </motion.a>
-            </li>
-            <li>
-              <motion.a
-                href="https://twitter.com/_devwurld"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                title="Follow Ajiboye on Twitter"
-              >
-                <AiOutlineTwitter size="2.2rem" />
               </motion.a>
             </li>
             <li>
